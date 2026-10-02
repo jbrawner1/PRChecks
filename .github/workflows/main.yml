@@ -18,70 +18,13 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-
-      - name: Download Kiuwan Local Analyzer
-        run: |
-          echo "Downloading Kiuwan Local Analyzer..."
-          curl -sSL "https://www.kiuwan.com/pub/analyzer/KiuwanLocalAnalyzer.zip" -o kla.zip
-          unzip -oq kla.zip -d kla
-
-      - name: Run Kiuwan SAST Scan
-        env:
-          KIUWAN_USER: ${{ secrets.KIUWAN_USER }}
-          KIUWAN_PWD: ${{ secrets.KIUWAN_PWD }}
-        run: |
-          cd kla/KiuwanLocalAnalyzer
-          chmod u+x bin/agent.sh
-          set +e
           
-          echo "🔍 Running Kiuwan scan for $APP_NAME"
-          ./bin/agent.sh \
-            -s "$SRC_PATH" \
-            -n "$APP_NAME" \
-            -c \
-            -wr \
-            --user "$KIUWAN_USER" \
-            --pass "$KIUWAN_PWD"
-          echo "Kiuwan scan finished"
-
-
-      - name: Fetch Last SAST Scan Code
-        id: fetch_delivery
+      - name: Download SARIF Report From Kiuwan SAST Scan
+        id: fetch_sarif
         env:
           KIUWAN_USER: ${{ secrets.KIUWAN_USER }}
           KIUWAN_PWD: ${{ secrets.KIUWAN_PWD }}
           KIUWAN_API: "https://api.kiuwan.com"
-        run: |
-          echo "🔁 Fetching last successful delivery code from Kiuwan API..."
-          # URL-encode the application name safely
-          encoded_app=$(printf "%s" "$APP_NAME" | jq -sRr @uri)
-
-          # Perform the API call
-          response=$(curl -sSL --user "$KIUWAN_USER:$KIUWAN_PWD" \
-            "$KIUWAN_API/deliveries/last_analysis?application=$encoded_app")
-          
-          echo "📦 Raw API response:"
-          echo "$response"
-
-          # Try to extract delivery code from multiple possible fields
-          code=$(echo "$response" | jq -r '.lastSuccessfulDelivery.code // .analysisCode // empty')
-
-          if [ -z "$code" ] || [ "$code" = "null" ]; then
-            echo "⚠️ Unable to extract lastSuccessfulDelivery.analysisCode from response"
-            exit 1
-          fi
-
-          echo "🏷 Last Successful Delivery Code: $code"
-          echo "delivery_code=$code" >> $GITHUB_OUTPUT
-          
-      - name: Download JUnit XML Report From Kiuwan SAST Scan
-        id: fetch_junit
-        env:
-          KIUWAN_USER: ${{ secrets.KIUWAN_USER }}
-          KIUWAN_PWD: ${{ secrets.KIUWAN_PWD }}
-          KIUWAN_API: "https://api.kiuwan.com"
-          DELIVERY_CODE: ${{ steps.fetch_delivery.outputs.delivery_code }}
-          APPLICATION_CODE: ${{ steps.fetch_delivery.outputs.encoded_app }}
         run: |
           echo "🧩 Fetching JUnit XML for delivery code: $DELIVERY_CODE"
           curl -sSL --user "$KIUWAN_USER:$KIUWAN_PWD" \
