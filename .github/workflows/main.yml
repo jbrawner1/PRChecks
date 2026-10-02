@@ -1,4 +1,4 @@
-name: Kiuwan SAST → TestRail Integration
+name: Kiuwan SAST
 
 on:
   pull_request:
@@ -27,8 +27,8 @@ jobs:
 
       - name: Run Kiuwan SAST Scan
         env:
-          KIUWAN_USER: ${ jbrawner@US.Demo }
-          KIUWAN_PWD: ${ cA8M5u1uEUH1 }
+          KIUWAN_USER: ${{ secrets.KIUWAN_USER }}
+          KIUWAN_PWD: ${{ secrets.KIUWAN_PWD }}
         run: |
           cd kla/KiuwanLocalAnalyzer
           chmod u+x bin/agent.sh
