@@ -29,6 +29,13 @@ jobs:
             "$KIUWAN_API/applications/analysis/defects/export?application=PingUtil&type=sarif")           
           echo $response > kiuwan.sarif
 
+      # Insert this step right before the upload-sarif step
+      - name: Archive SARIF results for debugging
+        uses: actions/upload-artifact@v4
+        with:
+          name: sarif-debug-file
+          path: kiuwan.sarif          
+
       - name: Upload SARIF results file
         uses: github/codeql-action/upload-sarif@v3
         with:
