@@ -26,12 +26,5 @@ jobs:
           KIUWAN_API: "https://api.kiuwan.com"
         run: |
           curl -sSL --user "$KIUWAN_USER:$KIUWAN_PWD" \
-            "$KIUWAN_API/applications/analysis/defects/export?application=PingUtil&type=sarif" -o kiuwan.sarif
-
-      - name: Upload SARIF results file
-        uses: github/codeql-action/upload-sarif@v3
-        with:
-          sarif_file: 'kiuwan.sarif'
-
-
+            "$KIUWAN_API/applications/analysis/defects/export?application=PingUtil&type=sarif"
   
