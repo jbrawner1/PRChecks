@@ -1,0 +1,48 @@
+name: Kiuwan SAST → TestRail Integration
+
+on:
+  pull_request:
+    types: [opened, reopened, review_requested]
+
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  kiuwan_sast_testrail_integration:
+    runs-on: ubuntu-latest
+    env:
+      APP_NAME: "Kiuwan Sample Java App Scan Demo"
+      SRC_PATH: "."
+      PROJECT_NAME: Test Demo
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Download Kiuwan Local Analyzer
+        run: |
+          echo "Downloading Kiuwan Local Analyzer..."
+          curl -sSL "https://www.kiuwan.com/pub/analyzer/KiuwanLocalAnalyzer.zip" -o kla.zip
+          unzip -oq kla.zip -d kla
+
+      - name: Run Kiuwan SAST Scan
+        env:
+          KIUWAN_USER: ${ jbrawner@US.Demo }
+          KIUWAN_PWD: ${ cA8M5u1uEUH1 }
+        run: |
+          cd kla/KiuwanLocalAnalyzer
+          chmod u+x bin/agent.sh
+          set +e
+          
+          echo "🔍 Running Kiuwan scan for $APP_NAME"
+          ./bin/agent.sh \
+            -s "$SRC_PATH" \
+            -n "$APP_NAME" \
+            -c \
+            -wr \
+            -as completeDelivery \
+            --user "$KIUWAN_USER" \
+            --pass "$KIUWAN_PWD"
+          echo "Kiuwan scan finished"
+
+  
