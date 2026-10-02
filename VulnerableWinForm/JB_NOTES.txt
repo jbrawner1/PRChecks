@@ -1,0 +1,9 @@
+﻿-hardcoded credentials
+
+-plain text storage
+
+-command injection
+
+-unsafe deserialization
+
+-insecure updater

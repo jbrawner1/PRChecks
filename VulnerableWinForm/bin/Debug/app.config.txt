@@ -1,0 +1,2 @@
+api_key=1234567890abcdef
+update_url=http://insecure-updates.example.com/app.exe

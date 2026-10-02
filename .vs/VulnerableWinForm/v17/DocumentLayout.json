@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Support\\Desktop\\MISC\\VulnerableApps\\VulnerableDesktop\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E074A0E1-8C16-42DF-B832-D26F5DFAD2AD}|VulnerableWinForm\\VulnerableWinForm.csproj|C:\\Users\\Support\\Desktop\\MISC\\VulnerableApps\\VulnerableDesktop\\vulnerablewinform\\jb_notes.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{E074A0E1-8C16-42DF-B832-D26F5DFAD2AD}|VulnerableWinForm\\VulnerableWinForm.csproj|solutionrelative:vulnerablewinform\\jb_notes.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E074A0E1-8C16-42DF-B832-D26F5DFAD2AD}|VulnerableWinForm\\VulnerableWinForm.csproj|C:\\Users\\Support\\Desktop\\MISC\\VulnerableApps\\VulnerableDesktop\\vulnerablewinform\\demopayload.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E074A0E1-8C16-42DF-B832-D26F5DFAD2AD}|VulnerableWinForm\\VulnerableWinForm.csproj|solutionrelative:vulnerablewinform\\demopayload.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E074A0E1-8C16-42DF-B832-D26F5DFAD2AD}|VulnerableWinForm\\VulnerableWinForm.csproj|C:\\Users\\Support\\Desktop\\MISC\\VulnerableApps\\VulnerableDesktop\\vulnerablewinform\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E074A0E1-8C16-42DF-B832-D26F5DFAD2AD}|VulnerableWinForm\\VulnerableWinForm.csproj|solutionrelative:vulnerablewinform\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E074A0E1-8C16-42DF-B832-D26F5DFAD2AD}|VulnerableWinForm\\VulnerableWinForm.csproj|c:\\users\\support\\desktop\\misc\\vulnerableapps\\vulnerabledesktop\\vulnerablewinform\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E074A0E1-8C16-42DF-B832-D26F5DFAD2AD}|VulnerableWinForm\\VulnerableWinForm.csproj|solutionrelative:vulnerablewinform\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Support\\Desktop\\MISC\\VulnerableApps\\VulnerableDesktop\\VulnerableWinForm\\Program.cs",
+              "RelativeDocumentMoniker": "VulnerableWinForm\\Program.cs",
+              "ToolTip": "C:\\Users\\Support\\Desktop\\MISC\\VulnerableApps\\VulnerableDesktop\\VulnerableWinForm\\Program.cs",
+              "RelativeToolTip": "VulnerableWinForm\\Program.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABgAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T17:32:32.935Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DemoPayload.cs",
+              "DocumentMoniker": "C:\\Users\\Support\\Desktop\\MISC\\VulnerableApps\\VulnerableDesktop\\VulnerableWinForm\\DemoPayload.cs",
+              "RelativeDocumentMoniker": "VulnerableWinForm\\DemoPayload.cs",
+              "ToolTip": "C:\\Users\\Support\\Desktop\\MISC\\VulnerableApps\\VulnerableDesktop\\VulnerableWinForm\\DemoPayload.cs",
+              "RelativeToolTip": "VulnerableWinForm\\DemoPayload.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T17:32:19.822Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\Support\\Desktop\\MISC\\VulnerableApps\\VulnerableDesktop\\VulnerableWinForm\\MainForm.cs",
+              "RelativeDocumentMoniker": "VulnerableWinForm\\MainForm.cs",
+              "ToolTip": "C:\\Users\\Support\\Desktop\\MISC\\VulnerableApps\\VulnerableDesktop\\VulnerableWinForm\\MainForm.cs",
+              "RelativeToolTip": "VulnerableWinForm\\MainForm.cs",
+              "ViewState": "AgIAAKkAAAAAAAAAAAAmwFgAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T15:16:05.599Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "JB_NOTES.txt",
+              "DocumentMoniker": "C:\\Users\\Support\\Desktop\\MISC\\VulnerableApps\\VulnerableDesktop\\VulnerableWinForm\\JB_NOTES.txt",
+              "RelativeDocumentMoniker": "VulnerableWinForm\\JB_NOTES.txt",
+              "ToolTip": "C:\\Users\\Support\\Desktop\\MISC\\VulnerableApps\\VulnerableDesktop\\VulnerableWinForm\\JB_NOTES.txt",
+              "RelativeToolTip": "VulnerableWinForm\\JB_NOTES.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-11-14T15:15:22.133Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
