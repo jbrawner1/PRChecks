@@ -4,7 +4,6 @@ on:
   pull_request:
     types: [opened, reopened, review_requested]
 
-
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -26,7 +25,6 @@ jobs:
           KIUWAN_PWD: ${{ secrets.KIUWAN_PWD }}
           KIUWAN_API: "https://api.kiuwan.com"
         run: |
-          echo "🧩 Fetching SARIF for delivery code: $KIUWAN_USER"
           curl -sSL --user "$KIUWAN_USER:$KIUWAN_PWD" \
             "$KIUWAN_API/applications/analysis/defects/export?application=PingUtil&type=sarif" -o kiuwan.sarif
 
