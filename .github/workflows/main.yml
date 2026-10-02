@@ -40,7 +40,6 @@ jobs:
             -n "$APP_NAME" \
             -c \
             -wr \
-            -as completeDelivery \
             --user "$KIUWAN_USER" \
             --pass "$KIUWAN_PWD"
           echo "Kiuwan scan finished"
