@@ -29,13 +29,6 @@ jobs:
             "$KIUWAN_API/applications/analysis/defects/export?application=PingUtil&type=sarif")           
           echo $response > kiuwan.sarif
 
-      # Insert this step right before the upload-sarif step
-      - name: Archive SARIF results for debugging
-        uses: actions/upload-artifact@v4
-        with:
-          name: sarif-debug-file
-          path: kiuwan.sarif    
-
       - name: Fix SARIF Timestamp
         run: |
             # Example: Replace "YYYY-MM-DD HH:mm:ss" with "YYYY-MM-DDTHH:mm:ssZ"
