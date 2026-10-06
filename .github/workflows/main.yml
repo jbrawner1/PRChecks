@@ -26,7 +26,7 @@ jobs:
           KIUWAN_API: "https://api.kiuwan.com"
         run: |
           response=$(curl -sSL --user "$KIUWAN_USER:$KIUWAN_PWD" \
-            "$KIUWAN_API/applications/analysis/defects/export?application=PingUtil&type=sarif")           
+            "$KIUWAN_API/applications/analysis/vulnerabilities/export?application=PingUtil&type=sarif")           
           echo $response > kiuwan.sarif
 
       - name: Fix SARIF Timestamp
